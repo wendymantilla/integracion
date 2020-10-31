@@ -1,6 +1,13 @@
 <div>
-    <input id="inputCal" matInput [matDatepicker]="picker">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker startView="month"></mat-datepicker>
+    <div>
+        <input id="inputCal" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="month"></mat-datepicker>
+    </div>
+    <button mat-raised-button color="primary" (click)="printcal()">Encontrar Imagen</button>
+    <div *ngIf="imageUrl">
+        <p>{{title}}</p>
+        <p>{{description}}</p>
+        <img src="{{ imageUrl }}" width="500" height="500"/>
+    </div>
 </div>
-<button mat-raised-button color="primary" (click)="printcal()">Encontrar Imagen</button>
