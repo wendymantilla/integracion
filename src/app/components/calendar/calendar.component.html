@@ -1,0 +1,6 @@
+<div>
+    <input id="inputCal" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker startView="month"></mat-datepicker>
+</div>
+<button mat-raised-button color="primary" (click)="printcal()">Encontrar Imagen</button>
